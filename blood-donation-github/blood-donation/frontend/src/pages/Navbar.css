@@ -1,0 +1,94 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #d60000;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 12px;
+  color: gray;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #d60000;
+}
+
+/* Button link (About Us) */
+.nav-link-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #333;
+  transition: 0.3s;
+}
+
+.nav-link-btn:hover {
+  color: #d60000;
+}
+
+/* Auth buttons */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.login-btn {
+  padding: 8px 16px;
+  border: 2px solid #d60000;
+  background: transparent;
+  color: #d60000;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #d60000;
+  color: white;
+}
+
+.register-btn {
+  padding: 8px 16px;
+  border: none;
+  background: #d60000;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background: darkred;
+}

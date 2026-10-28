@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap');
+
+.request-blood-page {
+  --bg:#F5F8FA; --surface:#FFFFFF; --border:#E3E9EE;
+  --ink:#142433; --ink-soft:#5C6E7D;
+  --navy:#0F2438; --navy-2:#16324B;
+  --crimson:#C0223A; --crimson-soft:#FBEAEC;
+  --teal:#0C7C7C; --teal-soft:#E4F4F3;
+  --amber:#D98E2E; --amber-soft:#FBF1E1;
+  --green:#1F9D55; --green-soft:#E7F6ED;
+  --radius:16px; --shadow:0 1px 2px rgba(15,36,56,.04), 0 20px 50px -20px rgba(15,36,56,.16);
+}
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.request-blood-page .navbar {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.request-blood-page .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.request-blood-page .brand-mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: var(--crimson);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.request-blood-page .brand-mark svg {
+  width: 18px;
+  height: 18px;
+}
+.request-blood-page .brand-text .name {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--navy);
+  line-height: 1;
+}
+.request-blood-page .brand-text .sub {
+  font-size: 11px;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+.request-blood-page .btn-outline {
+  border: 1.5px solid var(--border);
+  color: var(--navy);
+  padding: 9px 16px;
+  border-radius: 9px;
+  font-weight: 600;
+  font-size: 13.5px;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color .15s ease;
+}
+.request-blood-page .btn-outline:hover {
+  border-color: var(--navy);
+}
+
+.request-blood-page .page-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 90px;
+}
+.request-blood-page .page-head {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.request-blood-page .page-head .eyebrow {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--crimson);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 10px;
+}
+.request-blood-page .page-head h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 8px;
+}
+.request-blood-page .page-head p {
+  color: var(--ink-soft);
+  font-size: 14.5px;
+  margin: 0;
+}
+
+.request-blood-page .request-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 36px 40px;
+}
+
+.request-blood-page .form-error {
+  background: #FBEAEC;
+  color: var(--crimson);
+  border: 1px solid #F3D3D8;
+  border-radius: 9px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+.request-blood-page .section {
+  margin-bottom: 30px;
+}
+.request-blood-page .section:last-of-type {
+  margin-bottom: 0;
+}
+.request-blood-page .section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.request-blood-page .section-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.request-blood-page .section-icon svg {
+  width: 16px;
+  height: 16px;
+}
+.request-blood-page .section-icon.crimson {
+  background: var(--crimson-soft);
+}
+.request-blood-page .section-icon.crimson svg {
+  color: var(--crimson);
+}
+.request-blood-page .section-icon.teal {
+  background: var(--teal-soft);
+}
+.request-blood-page .section-icon.teal svg {
+  color: var(--teal);
+}
+.request-blood-page .section-title h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 16.5px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0;
+}
+
+.request-blood-page .row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.request-blood-page .field {
+  margin-bottom: 18px;
+}
+.request-blood-page .field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 7px;
+}
+.request-blood-page .input, .request-blood-page select, .request-blood-page textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 9px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  color: var(--ink);
+  background: #FBFCFD;
+  outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.request-blood-page select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%235C6E7D' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+.request-blood-page textarea {
+  resize: vertical;
+  min-height: 80px;
+  font-family: 'Inter', sans-serif;
+}
+.request-blood-page .input:focus, .request-blood-page select:focus, .request-blood-page textarea:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px var(--teal-soft);
+  background: #fff;
+}
+
+.request-blood-page .divider-line {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0 0 30px;
+}
+
+/* Urgency selector */
+.request-blood-page .urgency-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.request-blood-page .urgency-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border);
+  background: #FBFCFD;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color .15s ease, background .15s ease, transform .1s ease;
+  font-family: 'Inter', sans-serif;
+}
+.request-blood-page .urgency-card:hover {
+  transform: translateY(-1px);
+}
+.request-blood-page .urgency-card .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-bottom: 4px;
+}
+.request-blood-page .urgency-card.critical .dot { background: var(--crimson); }
+.request-blood-page .urgency-card.urgent .dot { background: var(--amber); }
+.request-blood-page .urgency-card.routine .dot { background: var(--teal); }
+.request-blood-page .urgency-card .u-label {
+  font-weight: 700;
+  font-size: 13.5px;
+  color: var(--navy);
+}
+.request-blood-page .urgency-card .u-desc {
+  font-size: 11.5px;
+  color: var(--ink-soft);
+}
+.request-blood-page .urgency-card.selected {
+  background: #fff;
+  border-color: var(--ink-soft);
+}
+.request-blood-page .urgency-card.critical.selected {
+  border-color: var(--crimson);
+  background: var(--crimson-soft);
+}
+.request-blood-page .urgency-card.urgent.selected {
+  border-color: var(--amber);
+  background: var(--amber-soft);
+}
+.request-blood-page .urgency-card.routine.selected {
+  border-color: var(--teal);
+  background: var(--teal-soft);
+}
+
+.request-blood-page .submit-btn {
+  width: 100%;
+  background: var(--crimson);
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 10px 22px -10px rgba(192,34,58,.55);
+  margin-top: 6px;
+}
+
+.request-blood-page .hotline-note {
+  text-align: center;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  margin-top: 18px;
+}
+.request-blood-page .hotline-note a {
+  color: var(--crimson);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Confirmation state */
+.request-blood-page .confirm-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 48px 44px;
+  text-align: center;
+}
+.request-blood-page .confirm-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--green-soft);
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+.request-blood-page .confirm-icon svg {
+  width: 26px;
+  height: 26px;
+}
+.request-blood-page .confirm-card h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 10px;
+}
+.request-blood-page .confirm-id {
+  display: inline-block;
+  background: var(--teal-soft);
+  color: var(--teal);
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 18px;
+}
+.request-blood-page .confirm-card p {
+  color: var(--ink-soft);
+  font-size: 14.5px;
+  line-height: 1.6;
+  max-width: 440px;
+  margin: 0 auto 26px;
+}
+.request-blood-page .confirm-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 26px;
+}
+.request-blood-page .confirm-summary div {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+}
+.request-blood-page .confirm-summary span {
+  display: block;
+  font-size: 11.5px;
+  color: var(--ink-soft);
+  margin-bottom: 4px;
+}
+.request-blood-page .confirm-summary strong {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 15px;
+  color: var(--navy);
+}
+.request-blood-page .confirm-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 26px;
+}
+.request-blood-page .confirm-actions .btn-outline, .request-blood-page .confirm-actions .submit-btn {
+  flex: 1;
+  margin-top: 0;
+}
+
+@media (max-width: 720px) {
+  .request-blood-page .row2, .request-blood-page .urgency-row, .request-blood-page .confirm-summary {
+    grid-template-columns: 1fr;
+  }
+  .request-blood-page .request-card, .request-blood-page .confirm-card {
+    padding: 26px 22px;
+  }
+  .request-blood-page .confirm-actions {
+    flex-direction: column;
+  }
+}

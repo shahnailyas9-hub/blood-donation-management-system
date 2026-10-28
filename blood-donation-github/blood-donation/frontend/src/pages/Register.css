@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap');
+
+.register-page {
+  --bg:#F5F8FA; --surface:#FFFFFF; --border:#E3E9EE;
+  --ink:#142433; --ink-soft:#5C6E7D;
+  --navy:#0F2438; --navy-2:#16324B;
+  --crimson:#C0223A; --crimson-soft:#FBEAEC;
+  --teal:#0C7C7C; --teal-soft:#E4F4F3;
+  --amber:#D98E2E; --amber-soft:#FBF1E1;
+  --green:#1F9D55; --green-soft:#E7F6ED;
+  --radius:16px; --shadow:0 1px 2px rgba(15,36,56,.04), 0 20px 50px -20px rgba(15,36,56,.16);
+}
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.register-page .navbar {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.register-page .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.register-page .brand-mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: var(--crimson);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.register-page .brand-mark svg {
+  width: 18px;
+  height: 18px;
+}
+.register-page .brand-text .name {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--navy);
+  line-height: 1;
+}
+.register-page .brand-text .sub {
+  font-size: 11px;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+.register-page .switch-link {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+}
+.register-page .switch-link a {
+  color: var(--crimson);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.register-page .page-wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 24px 90px;
+}
+.register-page .page-head {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.register-page .page-head .eyebrow {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--crimson);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 10px;
+}
+.register-page .page-head h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 8px;
+}
+.register-page .page-head p {
+  color: var(--ink-soft);
+  font-size: 14.5px;
+  margin: 0;
+}
+
+.register-page .steps {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.register-page .step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.register-page .step .num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--border);
+  color: var(--ink-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11.5px;
+}
+.register-page .step.active .num {
+  background: var(--crimson);
+  color: #fff;
+}
+.register-page .step.active {
+  color: var(--navy);
+}
+.register-page .step-line {
+  width: 36px;
+  height: 1.5px;
+  background: var(--border);
+  align-self: center;
+}
+
+.register-page form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 40px 44px;
+}
+
+.register-page .form-error {
+  background: #FBEAEC;
+  color: var(--crimson);
+  border: 1px solid #F3D3D8;
+  border-radius: 9px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.register-page .section {
+  margin-bottom: 34px;
+}
+.register-page .section:last-of-type {
+  margin-bottom: 0;
+}
+.register-page .section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.register-page .section-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.register-page .section-icon svg {
+  width: 16px;
+  height: 16px;
+}
+.register-page .section-icon.crimson {
+  background: var(--crimson-soft);
+}
+.register-page .section-icon.crimson svg {
+  color: var(--crimson);
+}
+.register-page .section-icon.teal {
+  background: var(--teal-soft);
+}
+.register-page .section-icon.teal svg {
+  color: var(--teal);
+}
+.register-page .section-icon.amber {
+  background: var(--amber-soft);
+}
+.register-page .section-icon.amber svg {
+  color: var(--amber);
+}
+.register-page .section-title h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0;
+}
+.register-page .section-title span {
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.register-page .row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.register-page .field {
+  margin-bottom: 18px;
+}
+.register-page .field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 7px;
+}
+.register-page .input, .register-page select, .register-page textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 9px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  color: var(--ink);
+  background: #FBFCFD;
+  outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.register-page select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%235C6E7D' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+.register-page textarea {
+  resize: vertical;
+  min-height: 76px;
+  font-family: 'Inter', sans-serif;
+}
+.register-page .input:focus, .register-page select:focus, .register-page textarea:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px var(--teal-soft);
+  background: #fff;
+}
+
+.register-page .divider-line {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0 0 34px;
+}
+
+.register-page .checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 26px 0 28px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+.register-page .checkbox-row input {
+  width: 17px;
+  height: 17px;
+  margin-top: 1px;
+  accent-color: var(--crimson);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.register-page .checkbox-row a {
+  color: var(--teal);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-page .submit-btn {
+  width: 100%;
+  background: var(--crimson);
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 10px 22px -10px rgba(192,34,58,.55);
+}
+
+@media (max-width: 720px) {
+  .register-page .row2 {
+    grid-template-columns: 1fr;
+  }
+  .register-page form {
+    padding: 28px 22px;
+  }
+}
